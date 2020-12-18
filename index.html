@@ -26,10 +26,60 @@
     <header class="jumbotron">
       <h1 class="display-3">Daily Planner</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" id="time-block" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="row">
+          <button class = "hour" data-hour = "8"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "9"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "10"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "11"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "12"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "1"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "2"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "3"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      <div class="row">
+          <button class = "hour" data-hour = "4"></button>
+          <p>llalala</p>
+          <button class="saveBtn">save symbol</button>
+      </div>
+      
+        
+        
+        
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -41,6 +91,14 @@
         
         //append todays date to p tag id="currentDay"
         $('#currentDay').append(currentDay);
+
+        $("button").click(function(){
+            var thisHour = $(this).attr("data-hour");
+            console.log(thisHour);
+            var newValue = $("#save").val();
+            console.log(newValue);
+            localStorage.setTimes(thisHour,newValue);
+        })
 
     
     </script>
